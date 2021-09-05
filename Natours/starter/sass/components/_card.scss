@@ -1,0 +1,203 @@
+.card__feature {
+  background-color: rgba($color-bg-white, 0.8);
+  padding: 2rem;
+  border-radius: 2px;
+  box-shadow: 0 2rem 5rem rgba($color-shadow, 0.4);
+  transition: transform 0.3s;
+
+  //? 漸層字體
+  &--icon {
+    font-size: 6rem;
+    background-image: linear-gradient(
+      to right,
+      $color-primary-light,
+      $color-primary-dark
+    );
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  &:hover {
+    transform: translateY(-1rem) scale(1.02);
+  }
+}
+
+//? 旋轉卡片部件
+.card-rotate-style {
+  position: relative;
+  height: 50rem;
+
+  //? 透視 perspective
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+
+  //? backface-visibility
+  backface-visibility: hidden;
+  transition: transform 0.8s ease;
+
+  &__front {
+    width: 100%;
+    position: absolute;
+    background-color: rgba($color-bg-white, 1);
+  }
+
+  &__back {
+    width: 100%;
+    position: absolute;
+    transform: rotateY(180deg);
+
+    &--1 {
+      background-image: linear-gradient(
+        to right bottom,
+        $color-2nd-light,
+        $color-2nd-dark
+      );
+    }
+
+    &--2 {
+      background-image: linear-gradient(
+        to right bottom,
+        $color-primary-light,
+        $color-primary-dark
+      );
+    }
+
+    &--3 {
+      background-image: linear-gradient(
+        to right bottom,
+        $color-3th-light,
+        $color-3th-dark
+      );
+    }
+  }
+
+  &:hover &__front {
+    transform: rotateY(-180deg);
+  }
+
+  &:hover &__back {
+    transform: rotateY(0);
+  }
+
+  &__img {
+    width: 100%;
+    height: 22rem;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+    &--1 {
+      background-size: cover;
+      background-image: linear-gradient(
+          to right bottom,
+          $color-2nd-light,
+          $color-2nd-dark
+        ),
+        url("../img/nat-5.jpg");
+
+      background-blend-mode: screen;
+    }
+
+    &--2 {
+      background-size: cover;
+      background-image: linear-gradient(
+          to right bottom,
+          $color-primary-light,
+          $color-primary-dark
+        ),
+        url("../img/nat-6.jpg");
+
+      background-blend-mode: screen;
+    }
+
+    &--3 {
+      background-size: cover;
+      background-image: linear-gradient(
+          to right bottom,
+          $color-3th-light,
+          $color-3th-dark
+        ),
+        url("../img/nat-7.jpg");
+
+      background-blend-mode: screen;
+    }
+  }
+
+  //CARD FRONT
+  &__text-title {
+    position: absolute;
+    text-align: right;
+    right: 5%;
+    top: 22%;
+
+    width: 60%;
+    font-weight: 300;
+    color: $color-bg-white;
+    text-transform: uppercase;
+    font-size: $font-title-cardR-title;
+
+    //? box-decoration-break
+    &--span {
+      padding: 1rem;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+
+      &-1 {
+        background-image: linear-gradient(
+          to right,
+          rgba($color-2nd-light, 0.8),
+          rgba($color-2nd-dark, 0.8)
+        );
+      }
+
+      &-2 {
+        background-image: linear-gradient(
+          to right,
+          rgba($color-primary-light, 0.8),
+          rgba($color-primary-dark, 0.8)
+        );
+      }
+
+      &-3 {
+        background-image: linear-gradient(
+          to right,
+          rgba($color-3th-light, 0.8),
+          rgba($color-3th-dark, 0.8)
+        );
+      }
+    }
+  }
+
+  &__text-description {
+    width: 60%;
+    margin: 0 auto;
+    font-size: $font-default;
+    list-style: none;
+    text-align: center;
+
+    li {
+      padding: 1.5rem;
+    }
+
+    li:not(:last-child) {
+      border-bottom: 1px solid rgba($color-font-gray, 0.2);
+    }
+  }
+
+  //CARD BACK
+  &__text-b {
+    text-align: center;
+    width: 80%;
+    margin: 2rem auto;
+    padding: 10rem 0 0 0;
+    color: $color-font-white;
+
+    &--only {
+      text-transform: uppercase;
+      font-size: $font-default;
+    }
+    &--value {
+      margin-top: 1rem;
+      font-weight: 200;
+      font-size: $font-title-cardR-value;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+//* 重設基本樣式
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  height: 95vh;
+  line-height: 1.5;
+  padding: 0.5rem;
+  font-family: "Lato", sans-serif;
+}
+
+main {
+  color: $color-font-gray;
+  background-color: $color-gray-light;
+}
