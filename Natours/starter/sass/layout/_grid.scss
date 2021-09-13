@@ -16,9 +16,9 @@
     }
   }
 
-  &:not(:last-child) {
-    margin-bottom: $width-grid-gutterY;
-  }
+  // &:not(:last-child) {
+  //   margin-bottom: $width-grid-gutterY;
+  // }
 
   &::after {
     @include clearfix;

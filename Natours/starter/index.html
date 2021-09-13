@@ -16,6 +16,33 @@
     <title>Natours | Exciting tours for adventurous people</title>
   </head>
   <body>
+    <nav class="nav">
+      <div class="nav__container">
+        <input type="checkbox" class="nav__hack" id="hack" />
+        <label for="hack" class="nav__click"
+          ><span class="nav__hamburger"></span
+        ></label>
+        <div class="nav__bg"></div>
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#" class="nav__link">01 &nbsp; Korone</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">02 &nbsp; Miko</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">03 &nbsp; Tama</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">04 &nbsp; Coco</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">05 &nbsp; Watame</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
     <header class="header">
       <div class="header-logoBox">
         <img src="img/logo-white.png" alt="Logo" class="header-logoBox__logo" />
@@ -25,16 +52,16 @@
           <span class="typo-headerTitleBox__main">outdoors</span>
           <span class="typo-headerTitleBox__sub">is where life happens</span>
         </h1>
-        <a href="#" class="btn--white btn--animated">DISCOVER OUR TOURS</a>
+        <a href="#" class="btn btn--white btn--animated">DISCOVER OUR TOURS</a>
       </div>
     </header>
 
     <main>
       <section class="section-about">
         <div class="section-about__container">
-          <div class="typo-sectionTitle u-margin-b-large u-text-center">
+          <h3 class="typo-sectionTitle u-margin-b-large u-text-center">
             exciting tours for adventurous people
-          </div>
+          </h3>
           <div class="row">
             <div class="col-1-of-2">
               <div class="typo-paragraphBox">
@@ -56,7 +83,7 @@
                   Facilis quas impedit alias at id. Culpa, rem obcaecati beatae
                   sapiente illo tenetur!
                 </p>
-                <a href="#" class="btn--text">Learn more &rarr;</a>
+                <a href="#" class="btn btn--text">Learn more &rarr;</a>
               </div>
             </div>
             <div class="col-1-of-2">
@@ -141,10 +168,8 @@
       </section>
       <section class="section-tours">
         <div class="section-tours__container">
-          <div class="typo-sectionTitle u-margin-b-large">
-            most popular tours
-          </div>
-          <div class="row">
+          <h3 class="typo-sectionTitle u-margin-b-large">most popular tours</h3>
+          <div class="row u-margin-b-large">
             <div class="col-1-of-3">
               <div class="card-rotate-style">
                 <div class="card-rotate-style card-rotate-style__front">
@@ -179,7 +204,7 @@
                   <div class="card-rotate-style__text-b">
                     <div class="card-rotate-style__text-b--only">only</div>
                     <div class="card-rotate-style__text-b--value">$300</div>
-                    <a href="#" class="btn--white">book now !</a>
+                    <a href="#" class="btn btn--white">book now !</a>
                   </div>
                 </div>
               </div>
@@ -218,7 +243,7 @@
                   <div class="card-rotate-style__text-b">
                     <div class="card-rotate-style__text-b--only">only</div>
                     <div class="card-rotate-style__text-b--value">$300</div>
-                    <a href="#" class="btn--white">book now !</a>
+                    <a href="#" class="btn btn--white">book now !</a>
                   </div>
                 </div>
               </div>
@@ -257,11 +282,115 @@
                   <div class="card-rotate-style__text-b">
                     <div class="card-rotate-style__text-b--only">only</div>
                     <div class="card-rotate-style__text-b--value">$300</div>
-                    <a href="#" class="btn--white">book now !</a>
+                    <a href="#" class="btn btn--white">book now !</a>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
+          <a href="#" class="btn btn--green">Discover all tours</a>
+        </div>
+      </section>
+      <section class="section-share">
+        <div class="video">
+          <video class="video__bg" muted loop autoplay>
+            <source class="" src="img/video.mp4" type="video/mp4" />
+            <source src="img/video.webm" type="video/webm" />
+          </video>
+        </div>
+        <div class="section-share__container">
+          <h3 class="typo-sectionTitle u-margin-b-large u-text-center">
+            We make people genuinely happy
+          </h3>
+          <div class="section-share__story">
+            <figure class="section-share__story--circle">
+              <img src="" alt="" class="section-share__story--circle-img" />
+              <div class="section-share__story--circle-filter"></div>
+            </figure>
+            <div class="section-share__story--text typo-paragraphBox">
+              <h2 class="typo-paragraphBox__h2">
+                i head the best week ever with my family
+              </h2>
+              <p class="typo-paragraphBox__p">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+                asperiores ipsum est consectetur? Quas ducimus rerum minima eum,
+                voluptas temporibus nesciunt aspernatur ipsam explicabo dicta
+                impedit cum optio assumenda aut.rerum minima eum, voluptas
+                temporibus nesciunt aspernatur ipsam explicabo dicta impedit cum
+                optio assumenda aut.
+              </p>
+            </div>
+          </div>
+          <div class="section-share__story">
+            <figure class="section-share__story--circle">
+              <img src="" alt="" class="section-share__story--circle-img" />
+              <div class="section-share__story--circle-filter"></div>
+            </figure>
+            <div class="section-share__story--text typo-paragraphBox">
+              <h2 class="typo-paragraphBox__h2">
+                i head the best week ever with my family
+              </h2>
+              <p class="typo-paragraphBox__p">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+                asperiores ipsum est consectetur? Quas ducimus rerum minima eum,
+                voluptas temporibus nesciunt aspernatur ipsam explicabo dicta
+                impedit cum optio assumenda aut.rerum minima eum, voluptas
+                temporibus nesciunt aspernatur ipsam explicabo dicta impedit cum
+                optio assumenda aut.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="u-text-center">
+          <a href="#" class="btn btn--text">Read all stories &rarr;</a>
+        </div>
+      </section>
+
+      <section class="book">
+        <div class="book__container">
+          <div class="book__input-area">
+            <h3 class="typo-sectionTitle u-margin-b-medium">
+              Start booking now
+            </h3>
+            <form class="form">
+              <div class="form__group">
+                <input
+                  class="form__group--input"
+                  type="text"
+                  id="name"
+                  placeholder="Full Name"
+                  required=""
+                />
+                <label class="form__group--label" for="name">Full Name</label>
+              </div>
+              <div class="form__group">
+                <input
+                  class="form__group--input"
+                  type="email"
+                  id="email"
+                  placeholder="Email address"
+                  required=""
+                />
+                <label class="form__group--label" for="email"
+                  >Email address</label
+                >
+              </div>
+              <div class="form__group">
+                <div class="form__group--radio">
+                  <input type="radio" name="size" id="small" />
+                  <span></span>
+                  <label for="small">Small tour group </label>
+                </div>
+                <div class="form__group--radio">
+                  <input type="radio" name="size" id="large" />
+                  <span></span>
+                  <label for="large">Small tour group </label>
+                </div>
+              </div>
+              <div class="form__group">
+                <button type="submit" class="btn btn--green">Next step</button>
+              </div>
+            </form>
           </div>
         </div>
       </section>

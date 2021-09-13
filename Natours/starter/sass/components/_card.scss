@@ -27,21 +27,26 @@
   position: relative;
   height: 50rem;
 
+  border-radius: 1rem;
   //? 透視 perspective
   perspective: 150rem;
   -moz-perspective: 150rem;
 
   //? backface-visibility
   backface-visibility: hidden;
+
   transition: transform 0.8s ease;
 
   &__front {
+    overflow: hidden;
+    box-shadow: 0 3rem 5rem rgba($color-shadow, 0.2);
     width: 100%;
     position: absolute;
     background-color: rgba($color-bg-white, 1);
   }
 
   &__back {
+    box-shadow: 0 3rem 5rem rgba($color-shadow, 0.2);
     width: 100%;
     position: absolute;
     transform: rotateY(180deg);
