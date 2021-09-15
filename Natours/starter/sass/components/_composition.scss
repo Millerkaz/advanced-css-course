@@ -1,6 +1,10 @@
 .composition {
   position: relative;
 
+  @include response(table-w) {
+    text-align: center;
+  }
+
   &__imgs {
     width: 55%;
     border-radius: 2px;
@@ -11,6 +15,11 @@
       z-index: 1;
       position: absolute;
       top: -2rem;
+
+      @include response(table-w) {
+        top: 0;
+        left: 5rem;
+      }
     }
 
     &--2 {
@@ -18,12 +27,22 @@
       top: 10rem;
       left: 10rem;
       position: absolute;
+
+      @include response(table-w) {
+        top: 5rem;
+        left: 0rem;
+      }
     }
 
     &--3 {
       z-index: 2;
       right: 0;
       position: absolute;
+
+      @include response(table-w) {
+        top: 0;
+        left: -5rem;
+      }
     }
 
     &:hover {
@@ -31,6 +50,24 @@
       outline: 1.5rem solid $color-primary;
       border-radius: 2px;
       z-index: 10;
+    }
+
+    @include response(table-w) {
+      width: 25%;
+      position: relative;
+    }
+
+    @include response(table-h) {
+      width: 30%;
+      position: relative;
+    }
+
+    @include response(phone) {
+      width: 60%;
+      position: relative;
+      top: 0rem;
+      left: 0rem;
+      display: inline-block;
     }
   }
 

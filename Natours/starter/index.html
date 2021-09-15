@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link
+    <!-- <link
       href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
       rel="stylesheet"
-    />
+    /> -->
 
     <link rel="stylesheet" href="css/icons.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -50,13 +50,17 @@
       <div class="typo-headerTitleBox">
         <h1>
           <span class="typo-headerTitleBox__main">outdoors</span>
-          <span class="typo-headerTitleBox__sub">is where life happens</span>
+          <span class="typo-headerTitleBox__sub u-margin-b-large"
+            >is where life happens</span
+          >
         </h1>
-        <a href="#" class="btn btn--white btn--animated">DISCOVER OUR TOURS</a>
+        <a href="#section-tours" class="btn btn--white btn--animated"
+          >DISCOVER OUR TOURS</a
+        >
       </div>
     </header>
 
-    <main>
+    <main class="main">
       <section class="section-about">
         <div class="section-about__container">
           <h3 class="typo-sectionTitle u-margin-b-large u-text-center">
@@ -64,7 +68,7 @@
           </h3>
           <div class="row">
             <div class="col-1-of-2">
-              <div class="typo-paragraphBox">
+              <div class="section-about__text typo-paragraphBox">
                 <h2 class="typo-paragraphBox__h2">
                   You're going to fall in love with nature
                 </h2>
@@ -88,20 +92,27 @@
             </div>
             <div class="col-1-of-2">
               <div class="composition">
+                <!-- html tag RWD (width switch: srcset & sizes) -->
                 <img
-                  src="./img/nat-1-large.jpg"
+                  srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
+                  sizes="(max-width: 900px) 270px,(max-width: 600px) 360px,300px"
                   alt="Photo 1"
                   class="composition__imgs composition__imgs--1"
+                  src="./img/nat-1-large.jpg"
                 />
                 <img
-                  src="./img/nat-2-large.jpg "
+                  srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w"
+                  sizes="(max-width:900px) 270px , (max-width:600px) 360px , 300px"
                   alt="Photo 2"
                   class="composition__imgs composition__imgs--2"
+                  src="./img/nat-2-large.jpg"
                 />
                 <img
-                  src="./img/nat-3-large.jpg"
+                  srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w"
+                  sizes="(max-width:900px) 270px , (max-width:600px) 360px , 300px"
                   alt="Photo 3"
                   class="composition__imgs composition__imgs--3"
+                  src="./img/nat-3-large.jpg"
                 />
               </div>
             </div>
@@ -166,12 +177,12 @@
           </div>
         </div>
       </section>
-      <section class="section-tours">
+      <section class="section-tours" id="section-tours">
         <div class="section-tours__container">
           <h3 class="typo-sectionTitle u-margin-b-large">most popular tours</h3>
           <div class="row u-margin-b-large">
             <div class="col-1-of-3">
-              <div class="card-rotate-style">
+              <div class="card">
                 <div class="card-rotate-style card-rotate-style__front">
                   <div
                     class="card-rotate-style__img card-rotate-style__img--1"
@@ -204,13 +215,13 @@
                   <div class="card-rotate-style__text-b">
                     <div class="card-rotate-style__text-b--only">only</div>
                     <div class="card-rotate-style__text-b--value">$300</div>
-                    <a href="#" class="btn btn--white">book now !</a>
+                    <a href="#popup" class="btn btn--white">book now !</a>
                   </div>
                 </div>
               </div>
             </div>
             <div class="col-1-of-3">
-              <div class="card-rotate-style">
+              <div class="card">
                 <div class="card-rotate-style card-rotate-style__front">
                   <div
                     class="card-rotate-style__img card-rotate-style__img--2"
@@ -243,13 +254,13 @@
                   <div class="card-rotate-style__text-b">
                     <div class="card-rotate-style__text-b--only">only</div>
                     <div class="card-rotate-style__text-b--value">$300</div>
-                    <a href="#" class="btn btn--white">book now !</a>
+                    <a href="#popup" class="btn btn--white">book now !</a>
                   </div>
                 </div>
               </div>
             </div>
             <div class="col-1-of-3">
-              <div class="card-rotate-style">
+              <div class="card">
                 <div class="card-rotate-style card-rotate-style__front">
                   <div
                     class="card-rotate-style__img card-rotate-style__img--3"
@@ -282,7 +293,7 @@
                   <div class="card-rotate-style__text-b">
                     <div class="card-rotate-style__text-b--only">only</div>
                     <div class="card-rotate-style__text-b--value">$300</div>
-                    <a href="#" class="btn btn--white">book now !</a>
+                    <a href="#popup" class="btn btn--white">book now !</a>
                   </div>
                 </div>
               </div>
@@ -291,6 +302,7 @@
           <a href="#" class="btn btn--green">Discover all tours</a>
         </div>
       </section>
+
       <section class="section-share">
         <div class="video">
           <video class="video__bg" muted loop autoplay>
@@ -346,9 +358,9 @@
         </div>
       </section>
 
-      <section class="book">
-        <div class="book__container">
-          <div class="book__input-area">
+      <section class="section-book">
+        <div class="section-book__container">
+          <div class="section-book__input-area">
             <h3 class="typo-sectionTitle u-margin-b-medium">
               Start booking now
             </h3>
@@ -395,6 +407,99 @@
         </div>
       </section>
     </main>
+
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__logo">
+          <!-- html tag RWD (resolution switch) -->
+          <!-- html 'Picture' tag (2 kinds up imgs choose) -->
+          <picture class="footer__logo--img">
+            <source
+              srcset="
+                ./img/logo-green-small-1x.png 1x,
+                ./img/logo-green-small-2x.png 2x
+              "
+              media="only screen and
+            (max-width:600px)"
+              src=" ./img/logo-green-small-1x.png"
+            />
+            <img
+              srcset="./img/logo-green-1x.png 1x, ./img/logo-green-2x.png 2x"
+              alt="logo"
+              src=" ./img/logo-green-1x.png"
+            />
+          </picture>
+        </div>
+        <div class="footer__text">
+          <div class="footer__text--left">
+            <ul class="footer__text--ul">
+              <li class="footer__text--li">
+                <a href="" class="footer__text--a">company</a>
+              </li>
+              <li class="footer__text--li">
+                <a href="" class="footer__text--a">contact us</a>
+              </li>
+              <li class="footer__text--li">
+                <a href="" class="footer__text--a">carrers</a>
+              </li>
+              <li class="footer__text--li">
+                <a href="" class="footer__text--a">privacy policy</a>
+              </li>
+              <li class="footer__text--li">
+                <a href="" class="footer__text--a">terms</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__text--right">
+            <p class="footer__text--copyright">
+              Built by
+              <a href="#" class="footer__text--a">Kaz Miller</a> for Jonas
+              Schmedtmann online course
+              <a href="#" class="footer__text--a">Advanced CSS and Sass</a>.
+              Copyright © by Kaz. You are 100% allowed to use this webpage for
+              both personal and commercial use, but NOT to claim it as your own
+              design. A credit to the original author, Kaz Miller, is of course
+              highly appreciated!
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="popup" id="popup">
+      <div class="popup__container">
+        <a href="#section-tours" class="popup__close">&times;</a>
+        <div class="popup__left">
+          <img src="./img/nat-8.jpg" alt="pop-photo" class="popup__img" />
+          <img src="./img/nat-9.jpg" alt="pop-photo" class="popup__img" />
+        </div>
+        <div class="popup__right">
+          <div class="typo-sectionTitle">Start booking now</div>
+          <div class="typo-paragraphBox">
+            <h2 class="typo-paragraphBox__h2">
+              Important – Please read these terms before booking
+            </h2>
+            <p class="typo-paragraphBox__p popup__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed
+              sed risus pretium quam. Aliquam sem et tortor consequat id.
+              Volutpat odio facilisis mauris sit amet massa vitae. Mi bibendum
+              neque egestas congue. Placerat orci nulla pellentesque dignissim
+              enim sit. Vitae semper quis lectus nulla at volutpat diam ut
+              venenatis. Malesuada pellentesque elit eget gravida cum sociis
+              natoque penatibus et. Proin fermentum leo vel orci porta non
+              pulvinar neque laoreet. Gravida neque convallis a cras semper.
+              Molestie at elementum eu facilisis sed odio morbi quis. Faucibus
+              vitae aliquet nec ullamcorper sit amet risus nullam eget. Nam
+              libero justo laoreet sit. Amet massa vitae tortor condimentum
+              lacinia quis vel eros donec. Sit amet facilisis magna etiam.
+              Imperdiet sed euismod nisi porta.
+            </p>
+          </div>
+          <button class="btn btn--green">book now</button>
+        </div>
+      </div>
+    </div>
 
     <!-- <section class="grid">
       <div class="row">

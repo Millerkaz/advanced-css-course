@@ -8,17 +8,6 @@
   width: 100%;
 
   //? Attribute selector (^= : start , *= : contain , $= : end )
-  [class^="col-"] {
-    float: left;
-    // background-color: $color-brown-light;
-    &:not(:last-child) {
-      margin-right: $width-grid-gutterX;
-    }
-  }
-
-  // &:not(:last-child) {
-  //   margin-bottom: $width-grid-gutterY;
-  // }
 
   &::after {
     @include clearfix;
@@ -48,5 +37,24 @@
     width: calc(
       ((100% - #{$width-grid-gutterX} * 3) / 4) * 3 + #{$width-grid-gutterX} * 2
     );
+  }
+
+  [class^="col-"] {
+    float: left;
+    // background-color: $color-brown-light;
+    &:not(:last-child) {
+      margin-right: $width-grid-gutterX;
+
+      @include response(table-w) {
+        margin: 0 auto 6rem auto;
+      }
+    }
+
+    @include response(table-w) {
+      width: 100%;
+      height: auto;
+      float: none;
+      margin: 0 auto;
+    }
   }
 }

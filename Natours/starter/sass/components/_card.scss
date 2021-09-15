@@ -5,6 +5,21 @@
   box-shadow: 0 2rem 5rem rgba($color-shadow, 0.4);
   transition: transform 0.3s;
 
+  @include response(table-w) {
+    width: 30%;
+    margin: 0 auto;
+    padding: 5rem 3rem;
+  }
+
+  @include response(table-h) {
+    width: 40%;
+    padding: 6rem 3rem;
+  }
+
+  @include response(phone) {
+    width: 70%;
+  }
+
   //? 漸層字體
   &--icon {
     font-size: 6rem;
@@ -23,10 +38,39 @@
 }
 
 //? 旋轉卡片部件
-.card-rotate-style {
+.card {
+  // overflow: hidden;
   position: relative;
   height: 50rem;
+  border-radius: 1rem;
 
+  &:hover &-rotate-style__front {
+    transform: rotateY(-180deg);
+  }
+
+  &:hover &-rotate-style__back {
+    transform: rotateY(0);
+  }
+
+  @include response(table-w) {
+    width: 35%;
+    box-shadow: 0 2rem 3rem rgba($color-shadow, 0.2);
+    margin: 0 auto;
+    height: auto;
+  }
+
+  @include response(table-h) {
+    width: 45%;
+  }
+
+  @include response(phone) {
+    width: 70%;
+  }
+}
+
+.card-rotate-style {
+  height: 50rem;
+  position: absolute;
   border-radius: 1rem;
   //? 透視 perspective
   perspective: 150rem;
@@ -43,17 +87,36 @@
     width: 100%;
     position: absolute;
     background-color: rgba($color-bg-white, 1);
+
+    @include response(table-w) {
+      position: relative;
+      box-shadow: none;
+      height: auto;
+    }
   }
 
   &__back {
+    backface-visibility: hidden;
     box-shadow: 0 3rem 5rem rgba($color-shadow, 0.2);
     width: 100%;
     position: absolute;
     transform: rotateY(180deg);
 
+    @include response(table-w) {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      margin-top: -1rem;
+      clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+      padding-bottom: 2rem;
+      position: relative;
+      box-shadow: none;
+      transform: rotateY(0);
+      height: auto;
+    }
+
     &--1 {
       background-image: linear-gradient(
-        to right bottom,
+        to bottom,
         $color-2nd-light,
         $color-2nd-dark
       );
@@ -61,7 +124,7 @@
 
     &--2 {
       background-image: linear-gradient(
-        to right bottom,
+        to bottom,
         $color-primary-light,
         $color-primary-dark
       );
@@ -69,25 +132,17 @@
 
     &--3 {
       background-image: linear-gradient(
-        to right bottom,
+        to bottom,
         $color-3th-light,
         $color-3th-dark
       );
     }
   }
 
-  &:hover &__front {
-    transform: rotateY(-180deg);
-  }
-
-  &:hover &__back {
-    transform: rotateY(0);
-  }
-
   &__img {
     width: 100%;
     height: 22rem;
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
 
     &--1 {
       background-size: cover;
@@ -191,9 +246,13 @@
   &__text-b {
     text-align: center;
     width: 80%;
-    margin: 2rem auto;
+    margin: 0 auto;
     padding: 10rem 0 0 0;
     color: $color-font-white;
+
+    @include response(table-w) {
+      padding: 5.5rem 0 0 0;
+    }
 
     &--only {
       text-transform: uppercase;
@@ -203,6 +262,12 @@
       margin-top: 1rem;
       font-weight: 200;
       font-size: $font-title-cardR-value;
+      margin-bottom: 5rem;
+
+      @include response(table-w) {
+        font-size: 5rem;
+        margin-bottom: 2rem;
+      }
     }
   }
 }

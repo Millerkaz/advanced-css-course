@@ -3,3 +3,44 @@
   display: table;
   clear: both;
 }
+
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*
+phone 0-600px  
+tablet-portrait 600-900px
+table-landscape 900-1200px
+[normal 1200-1800px]
+big-pc 1800px +
+*/
+
+@mixin response($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 37.5em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == table-h {
+    @media (max-width: 56.25em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == table-w {
+    @media (max-width: 75em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == big-pc {
+    @media (min-width: 112.5em) {
+      @content;
+    }
+  }
+}

@@ -4,17 +4,46 @@
   &__group {
     font-size: 1.2rem;
 
+    @include response(table-w) {
+      width: 70%;
+      margin: 0 auto;
+    }
+
+    @include response(table-h) {
+      width: 100%;
+    }
+
     &:not(:last-child) {
       margin-bottom: 3.5rem;
+
+      @include response(table-w) {
+        margin-bottom: 3rem;
+      }
+
+      @include response(phone) {
+        margin-bottom: 2rem;
+      }
     }
     &--input {
       padding-left: 2rem;
       border: none;
-      width: 90%;
+      width: 80%;
       height: 5rem;
       font-size: 1.6rem;
       font-family: inherit;
       transition: all 0.1s;
+
+      @include response(table-w) {
+        width: 100%;
+      }
+
+      // @include response(table-h) {
+      //   width: 70%;
+      // }
+
+      // @include response(phone) {
+      //   width: 100%;
+      // }
 
       &:focus {
         outline: none;
@@ -48,6 +77,10 @@
       font-size: 2rem;
       display: inline-block;
       margin-right: 3rem;
+
+      @include response(phone) {
+        display: block;
+      }
 
       input {
         display: none;

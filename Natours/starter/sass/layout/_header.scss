@@ -8,16 +8,33 @@
       rgba($color-primary-light, 0.8),
       rgba($color-primary-dark, 0.8)
     ),
-    url("../img/hero.jpg");
+    url("../img/hero-small.jpg");
 
   background-position: center;
   background-size: cover;
   clip-path: polygon(0 0, 0 100%, 100% 75vh, 100% 0);
 
+  // Pic RWD in css
+  @media only screen and (min-resolution: 192dpi),
+    only screen and(-webkit-min-device-pixel-ratio: 2),
+    (min-width: 2000px) {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.8),
+        rgba($color-primary-dark, 0.8)
+      ),
+      url("../img/hero.jpg");
+  }
+
   &-logoBox {
     position: absolute;
     top: 4rem;
     left: 4rem;
+
+    @include response(table-h) {
+      top: 3rem;
+      left: 1.5rem;
+    }
 
     &__logo {
       height: 5rem;

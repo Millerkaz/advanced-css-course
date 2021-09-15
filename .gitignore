@@ -1,0 +1,6 @@
+node_modules
+.parcel-cache
+dist
+config.js
+.cache
+簡介.pptx

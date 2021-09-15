@@ -9,7 +9,23 @@
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 62.5%; //10px
+
+  @include response(table-w) {
+    font-size: 56.25%; //9
+  }
+
+  @include response(table-h) {
+    font-size: 50%; //8
+  }
+
+  @include response(phone) {
+    font-size: 43.75%; //7
+  }
+
+  @include response(big-pc) {
+    font-size: 75%; //12
+  }
 }
 
 body {
@@ -18,9 +34,12 @@ body {
   line-height: 1.5;
   padding: 0.5rem;
   font-family: "Lato", sans-serif;
+
+  @include response(table-w) {
+    padding: 0;
+  }
 }
 
 main {
   color: $color-font-gray;
-  // background-color: $color-gray-light;
 }

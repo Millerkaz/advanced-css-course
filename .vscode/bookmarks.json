@@ -1,0 +1,34 @@
+{
+	"files": [
+		{
+			"path": "Natours/starter/index.html",
+			"bookmarks": [
+				{
+					"line": 94,
+					"column": 49,
+					"label": ""
+				},
+				{
+					"line": 413,
+					"column": 46,
+					"label": ""
+				},
+				{
+					"line": 414,
+					"column": 29,
+					"label": ""
+				}
+			]
+		},
+		{
+			"path": "Natours/starter/sass/layout/_header.scss",
+			"bookmarks": [
+				{
+					"line": 16,
+					"column": 20,
+					"label": ""
+				}
+			]
+		}
+	]
+}
