@@ -1,0 +1,77 @@
+.btn--inline {
+  display: inline-block;
+  font-size: 1.4rem;
+  border-bottom: 1px solid var(--color-primary);
+
+  &:link,
+  &:visited {
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+
+  &:hover {
+    color: var(--color-grey-dark-1);
+    border-bottom: 1px solid var(--color-grey-dark-1);
+  }
+
+  &:hover span {
+    transition: all 0.3s;
+    margin-right: 1rem;
+  }
+}
+
+.btn__text-move {
+  position: relative;
+  overflow: hidden;
+  background-image: linear-gradient(
+    to right,
+    var(--color-primary-light),
+    var(--color-primary-dark)
+  );
+  cursor: pointer;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  border-radius: 10rem;
+  padding: 2rem 0;
+  width: 100%;
+  font-size: 2.4rem;
+  color: var(--color-grey-light-3);
+
+  & > * {
+    display: inline-block;
+    text-transform: uppercase;
+    transition: all 0.1s;
+    font-weight: 300;
+  }
+
+  &--visible {
+  }
+
+  &--invisible {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+
+    transform: translateY(-120%);
+  }
+
+  &:hover {
+    background-image: linear-gradient(
+      to left,
+      var(--color-primary-light),
+      var(--color-primary-dark)
+    );
+  }
+
+  &:hover &--visible {
+    transform: translateY(300%);
+  }
+
+  &:hover &--invisible {
+    transform: translateY(120%);
+  }
+
+  &:active {
+    animation: pulse 1s infinite;
+  }
+}

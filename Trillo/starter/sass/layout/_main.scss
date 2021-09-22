@@ -1,0 +1,419 @@
+.main {
+  display: flex;
+  color: white;
+
+  @media only screen and (max-width: $rwd-medium) {
+    flex-direction: column;
+  }
+
+  &__sidebar {
+    flex: 0 0 18%;
+    background-color: var(--color-grey-dark-1);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media only screen and (max-width: $rwd-medium) {
+      flex-direction: row;
+    }
+
+    &-ul {
+      margin-top: 3rem;
+
+      @media only screen and (max-width: $rwd-medium) {
+        flex: 1;
+        margin: 0;
+        display: flex;
+      }
+    }
+
+    &-li {
+      position: relative;
+      list-style: none;
+      text-transform: uppercase;
+      font-family: inherit;
+      font-weight: 500;
+      font-size: 1.4rem;
+      margin: 1rem 0;
+      padding: 2rem 0;
+      cursor: pointer;
+      user-select: none;
+
+      display: flex;
+      align-content: center;
+      justify-content: center;
+
+      @media only screen and (max-width: $rwd-medium) {
+        flex: 1;
+        margin: 0;
+      }
+
+      @media only screen and (max-width: $rwd-small) {
+        flex-wrap: wrap;
+        // flex-direction: column;
+        text-align: center;
+      }
+
+      span {
+        flex: 0 0 70%;
+        display: block;
+        height: auto;
+        z-index: 10;
+
+        @media only screen and (max-width: $rwd-small) {
+          display: inline-block;
+          flex: 0 0 100%;
+        }
+      }
+
+      &::before {
+        content: "";
+        top: 0;
+        left: 0;
+        position: absolute;
+        background-color: var(--color-primary-light);
+        width: 0.3rem;
+        height: 100%;
+        transform: scaleY(0);
+        transition: transform 0.3s, width 0.3s cubic-bezier(1, 0, 0, 1) 0.3s;
+      }
+
+      &:hover::before,
+      &-home::before {
+        transform: scaleY(1);
+        width: 100%;
+      }
+
+      &:active::before {
+        background-color: var(--color-primary);
+      }
+    }
+
+    &-icon {
+      flex: 0 0 30%;
+      width: 1.5rem;
+      height: 1.5rem;
+      z-index: 10;
+      fill: currentColor;
+
+      @media only screen and (max-width: $rwd-small) {
+        flex: 0 0 100%;
+        margin-bottom: 1rem;
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+
+    &-copyright {
+      text-align: center;
+      font-size: 1.2rem;
+      padding: 3rem 1rem;
+
+      @media only screen and (max-width: $rwd-medium) {
+        display: none;
+      }
+    }
+  }
+
+  &__content {
+    flex: 1;
+  }
+
+  &__img-bar {
+    height: 20rem;
+    display: flex;
+
+    @media only screen and (max-width: $rwd-small) {
+      height: 15rem;
+    }
+
+    @media only screen and (max-width: $rwd-smallest) {
+      height: 12rem;
+    }
+
+    &--img {
+      flex: 1;
+      background-size: cover;
+      background-position: center;
+
+      &-1 {
+        background-image: url(../img/hotel-1.jpg);
+      }
+
+      &-2 {
+        background-image: url(../img/hotel-2.jpg);
+      }
+
+      &-3 {
+        background-image: url(../img/hotel-3.jpg);
+      }
+    }
+  }
+
+  &__hotel-title {
+    background-color: white;
+    color: var(--color-grey-dark-2);
+
+    display: flex;
+    align-items: center;
+
+    & > * {
+      padding: 2rem 0;
+
+      @media only screen and (max-width: $rwd-small) {
+        padding: 0;
+      }
+    }
+
+    @media only screen and (max-width: $rwd-smallest) {
+      flex-wrap: wrap;
+    }
+
+    &--name {
+      padding: 2rem 3rem;
+      font-size: 2.4rem;
+      font-weight: 300;
+      text-transform: uppercase;
+
+      @media only screen and (max-width: $rwd-small) {
+        padding: 1rem;
+        font-size: 1.8rem;
+      }
+
+      @media only screen and (max-width: $rwd-smallest) {
+        text-align: center;
+        flex: 0 0 70%;
+        font-size: 2.4rem;
+        padding: 3rem 2rem;
+      }
+    }
+
+    &--star {
+      margin-right: auto;
+
+      display: flex;
+      align-items: center;
+
+      @media only screen and (max-width: $rwd-smallest) {
+        flex: 0 0 20%;
+      }
+
+      svg {
+        width: 2rem;
+        height: 2rem;
+        fill: var(--color-primary);
+
+        @media only screen and (max-width: $rwd-small) {
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+      }
+    }
+
+    &--location {
+      line-height: 0;
+      margin-right: 3rem;
+
+      display: flex;
+      align-items: center;
+
+      @media only screen and (max-width: $rwd-small) {
+        margin-right: 3rem;
+      }
+
+      @media only screen and (max-width: $rwd-smallest) {
+        margin-left: auto;
+      }
+
+      svg {
+        width: 2rem;
+        height: 2rem;
+        fill: var(--color-primary);
+        margin-right: 1rem;
+
+        @media only screen and (max-width: $rwd-small) {
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+      }
+
+      a {
+        display: inline-block;
+
+        &:link,
+        &:visited {
+          color: var(--color-primary);
+          font-size: 1.4rem;
+        }
+
+        &:hover {
+          color: var(--color-grey-dark-1);
+        }
+
+        &:active {
+          transition: all 0.3s;
+
+          animation: pulse 1s infinite;
+        }
+      }
+    }
+
+    &--score {
+      background-color: var(--color-primary);
+      color: white;
+      align-self: stretch;
+      font-weight: 300;
+      padding: 2rem;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      @media only screen and (max-width: $rwd-small) {
+        padding: 1rem;
+      }
+
+      &-num {
+        margin-bottom: 1rem;
+        font-size: 2.4rem;
+
+        @media only screen and (max-width: $rwd-small) {
+          font-size: 2rem;
+          margin-bottom: 0.5rem;
+        }
+      }
+
+      &-vote {
+      }
+    }
+  }
+
+  &__users {
+    color: var(--color-grey-dark-2);
+    padding: 5rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @media only screen and (max-width: $rwd-small) {
+      flex-direction: column;
+    }
+
+    &-recommend {
+      flex: 0 0 60%;
+      font-size: 1.4rem;
+      padding: 1rem 3rem;
+      background-color: white;
+
+      @media only screen and (max-width: $rwd-small) {
+        margin-bottom: 3rem;
+        padding: 1rem 1.5rem;
+      }
+
+      & > * {
+        padding: 2rem 0;
+      }
+
+      & > *:not(:last-child) {
+        border-bottom: 1px solid var(--color-grey-light-2);
+      }
+
+      &--opinion {
+        line-height: 2;
+        padding: 2rem 0;
+      }
+
+      &--feather {
+        list-style: none;
+
+        display: flex;
+        flex-wrap: wrap;
+
+        li {
+          flex: 0 0 50%;
+          margin: 0 0 2rem 0;
+
+          display: flex;
+          align-items: center;
+        }
+
+        &-icon {
+          width: 1.5rem;
+          height: 1.5rem;
+          fill: var(--color-primary);
+          margin-right: 1rem;
+        }
+      }
+
+      &--footer {
+        display: flex;
+        align-items: center;
+
+        p {
+          font-size: 1.2rem;
+          color: var(--color-grey-dark-3);
+          margin-right: auto;
+        }
+      }
+
+      &--user-imgs {
+        display: flex;
+
+        img {
+          box-sizing: unset;
+          display: inline-block;
+          margin: 0;
+          border: 3px solid white;
+        }
+
+        & > *:not(:last-child) {
+          margin-right: -1.5rem;
+        }
+      }
+    }
+
+    &-comment {
+      flex: 0 0 35%;
+
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      &--card {
+      }
+
+      & > *:not(:last-child) {
+        margin-bottom: 3rem;
+      }
+    }
+
+    &-book {
+      flex: 0 0 100%;
+      text-transform: uppercase;
+      margin-top: 5rem;
+
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      h1 {
+        flex: 0 0 100%;
+        margin-bottom: 3rem;
+        font-weight: 300;
+        line-height: 2;
+        text-align: center;
+      }
+
+      button {
+        width: 40%;
+
+        @media only screen and (max-width: $rwd-small) {
+          width: 80%;
+        }
+      }
+    }
+  }
+}

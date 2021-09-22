@@ -1,0 +1,47 @@
+.card {
+  &__opinion {
+    background-color: white;
+  }
+
+  &__p {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    padding: 3rem;
+  }
+
+  &__user-bar {
+    padding: 2rem 4rem;
+    display: flex;
+    align-items: center;
+
+    @media only screen and (max-width: $rwd-medium) {
+      padding: 2rem 2rem;
+    }
+
+    img {
+    }
+
+    &--text {
+      margin-right: auto;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      &-name {
+        color: var(--color-grey-dark-1);
+        font-size: 1.2rem;
+      }
+
+      &-date {
+      }
+    }
+
+    &--score {
+      margin-right: 1rem;
+      font-size: 2.4rem;
+      font-weight: 300;
+      color: var(--color-primary-light);
+    }
+  }
+}

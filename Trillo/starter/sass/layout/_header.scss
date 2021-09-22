@@ -1,0 +1,154 @@
+.header {
+  font-size: 1.6rem;
+  color: var(--color-grey-dark-2);
+  background-color: white;
+
+  display: flex;
+  align-items: center;
+
+  @media only screen and (max-width: $rwd-small) {
+    flex-wrap: wrap;
+  }
+
+  &__logo-container {
+    flex: 0 0 25%;
+
+    @media only screen and (max-width: $rwd-small) {
+      margin-right: auto;
+    }
+  }
+
+  &__logo {
+    width: 7rem;
+    padding-left: 2rem;
+  }
+
+  &__search {
+    flex: 0 0 40%;
+    margin-right: auto;
+
+    @media only screen and (max-width: $rwd-small) {
+      flex: 0 0 100%;
+      order: 1;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    &--search-bar {
+      width: 90%;
+      background-color: var(--color-grey-light-2);
+      padding: 1rem 2rem;
+      border-radius: 2rem;
+      transition: all 0.2s;
+
+      &::placeholder {
+        color: var(--color-grey-dark-2);
+        font-size: 1.6rem;
+      }
+
+      &:focus {
+        width: 95%;
+        transform-origin: center;
+        background-color: var(--color-grey-light-3);
+      }
+    }
+
+    &--submit {
+    }
+
+    &--icon {
+    }
+  }
+
+  &__icons-container {
+    flex: 0 0 10%;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    flex: 0 0 50%;
+    padding: 0 2rem;
+    height: 8rem;
+    fill: var(--color-grey-dark-1);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      background-color: var(--color-grey-light-3);
+    }
+
+    &::after {
+      position: absolute;
+      top: 2rem;
+      right: 1rem;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      color: white;
+      background-color: var(--color-primary);
+      font-size: 1.2rem;
+      font-family: inherit;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &--envelope {
+      position: relative;
+
+      &::after {
+        content: "4";
+      }
+    }
+
+    &--bookmark {
+      position: relative;
+
+      &::after {
+        content: "10";
+      }
+    }
+  }
+
+  &__icon-svg {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  &__icon-text {
+  }
+
+  &__user {
+    height: 8rem;
+    padding: 0 2rem;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      background-color: var(--color-grey-light-3);
+    }
+
+    // &--img {
+    //   width: 4rem;
+    //   height: 4rem;
+    //   border-radius: 50%;
+    //   margin-right: 1rem;
+    // }
+
+    &--name {
+    }
+  }
+}
