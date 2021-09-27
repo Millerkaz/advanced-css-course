@@ -14,7 +14,7 @@ html {
 
 body {
   font-family: "Nunito", sans-serif;
-  color: #6D5D4B;
+  color: #6d5d4b;
   font-weight: 300;
   line-height: 1.6; }
 
@@ -46,11 +46,11 @@ body {
   .heading-2--light {
     color: #f9f7f6; }
   .heading-2--dark {
-    color: #54483A; }
+    color: #3f4a3c; }
 
 .heading-3 {
   font-size: 1.6rem;
-  color: #c69963;
+  color: #ffb46a;
   text-transform: uppercase; }
 
 .heading-4 {
@@ -58,10 +58,10 @@ body {
   .heading-4--light {
     color: #f9f7f6; }
   .heading-4--dark {
-    color: #54483A; }
+    color: #3f4a3c; }
 
 .btn {
-  background-color: #c69963;
+  background-color: #ffb46a;
   color: #fff;
   border: none;
   border-radius: 0;
@@ -72,7 +72,7 @@ body {
   cursor: pointer;
   transition: all .2s; }
   .btn:hover {
-    background-color: #B28451; }
+    background-color: #d6b1be; }
 
 .mb-sm {
   margin-bottom: 2rem; }
@@ -87,7 +87,7 @@ body {
   margin-bottom: 8rem; }
 
 .sidebar {
-  background-color: #c69963;
+  background-color: #ffb46a;
   grid-column: sidebar-start / sidebar-end;
   grid-row: 1 / -1;
   display: flex;
@@ -126,9 +126,9 @@ body {
         transform: translateY(1rem); } }
 
 .header {
-  background-color: #54483A;
+  background-color: #3f4a3c;
   grid-column: full-start / col-end 6;
-  background-image: linear-gradient(rgba(16, 29, 44, 0.93), rgba(16, 29, 44, 0.93)), url(../img/hero.jpeg);
+  background-image: linear-gradient(rgba(80, 69, 56, 0.93), rgba(80, 69, 56, 0.93)), url(../img/hero.jpeg);
   background-size: cover;
   background-position: center;
   padding: 8rem;
@@ -174,7 +174,7 @@ body {
       filter: brightness(70%); }
 
 .realtors {
-  background-color: #101d2c;
+  background-color: #504538;
   grid-column: col-start 7 / full-end;
   padding: 3rem;
   display: grid;
@@ -229,7 +229,7 @@ body {
       width: auto;
       margin-bottom: 0; } }
   .feature__icon {
-    fill: #c69963;
+    fill: #ffb46a;
     width: 4.5rem;
     height: 4.5rem;
     grid-row: 1 / span 2;
@@ -238,9 +238,9 @@ body {
     font-size: 1.7rem; }
 
 .story__pictures {
-  background-color: #c69963;
+  background-color: #ffb46a;
   grid-column: full-start / col-end 4;
-  background-image: linear-gradient(rgba(198, 153, 99, 0.5), rgba(198, 153, 99, 0.5)), url(../img/back.jpg);
+  background-image: linear-gradient(rgba(255, 180, 106, 0.5), rgba(255, 180, 106, 0.5)), url(../img/back.jpg);
   background-size: cover;
   display: grid;
   grid-template-rows: repeat(6, 1fr);
@@ -315,7 +315,7 @@ body {
   .home__like {
     grid-row: 1 / 2;
     grid-column: 2 / 3;
-    fill: #c69963;
+    fill: #ffb46a;
     height: 2.5rem;
     width: 2.5rem;
     z-index: 2;
@@ -332,7 +332,7 @@ body {
     font-size: 1.6rem;
     text-align: center;
     padding: 1.25rem;
-    background-color: #101d2c;
+    background-color: #504538;
     color: #fff;
     font-weight: 400;
     transform: translateY(50%); }
@@ -344,7 +344,7 @@ body {
     display: flex;
     align-items: center; }
     .home__location svg, .home__rooms svg, .home__area svg, .home__price svg {
-      fill: #c69963;
+      fill: #ffb46a;
       height: 2rem;
       width: 2rem;
       margin-right: 1rem; }
@@ -409,7 +409,7 @@ body {
     display: block; }
 
 .footer {
-  background-color: #101d2c;
+  background-color: #504538;
   grid-column: full-start / full-end;
   padding: 8rem; }
 

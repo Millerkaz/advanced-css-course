@@ -1,0 +1,35 @@
+.feature {
+  padding: 20rem 0;
+  grid-column: center-start/center-end;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-column-gap: 4rem;
+  grid-row-gap: 10rem;
+
+  &__card {
+    display: grid;
+    grid-template-columns: 5rem 1fr;
+    grid-column-gap: 4rem;
+    grid-row-gap: 2rem;
+
+    align-self: flex-start;
+
+    &--icon {
+      grid-row: 1/3;
+      width: 5rem;
+      height: 5rem;
+      transform: translateY(-30%);
+    }
+
+    h4 {
+    }
+
+    p {
+      align-self: flex-start;
+      font-size: 1.7rem;
+      font-family: $font-primary;
+      color: $color-grey-dark-2;
+    }
+  }
+}

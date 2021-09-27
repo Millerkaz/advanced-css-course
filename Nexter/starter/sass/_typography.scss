@@ -1,0 +1,49 @@
+%heading {
+  color: $color-secondary;
+  font-family: $font-display;
+  font-weight: 400;
+}
+
+.ty-heading-1 {
+  @extend %heading;
+  font-size: 5rem;
+}
+
+.ty-heading-2 {
+  @extend %heading;
+  font-size: 4rem;
+
+  &--white {
+    color: $color-grey-light-1;
+  }
+}
+
+.ty-heading-3 {
+  @extend %heading;
+  font-size: 3rem;
+}
+
+.ty-heading-4 {
+  @extend %heading;
+  font-size: 2rem;
+
+  &--primary {
+    color: $color-primary;
+  }
+
+  &--white {
+    color: $color-grey-light-1;
+  }
+}
+
+.u-text-upper {
+  text-transform: uppercase;
+}
+
+.u-mg-t-15 {
+  margin-top: 1.5rem;
+}
+
+.u-font-16 {
+  font-size: 1.6rem;
+}

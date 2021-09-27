@@ -1,17 +1,446 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        
-        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i" rel="stylesheet">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
-        
-        <title>nexter &mdash; your home, your freedom</title>
-    </head>
-    <body class="container">
-        
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+
+    <title>nexter &mdash; your home, your freedom</title>
+  </head>
+  <body class="container">
+    <div class="sidebar">sidebar</div>
+    <header class="header">
+      <img src="../img/logo.png" alt="logo" class="header__logo" />
+      <div class="header__title">
+        <h4 class="ty-heading-4 ty-heading-4--primary u-text-upper">
+          Your own home:
+        </h4>
+        <h2 class="ty-heading-2 ty-heading-2--white">
+          The ultimate personal freedom
+        </h2>
+        <button class="btn u-mg-t-15">view our properties</button>
+      </div>
+      <p>Seen on</p>
+      <div class="header__logo-bar">
+        <div class="header__logo-bar--img">
+          <img alt="bbc" src="../img/logo-bbc.png" />
+        </div>
+        <div class="header__logo-bar--img">
+          <img alt="bi" src="../img/logo-bi.png" />
+        </div>
+        <div class="header__logo-bar--img">
+          <img alt="forbes" src="../img/logo-forbes.png" />
+        </div>
+        <div class="header__logo-bar--img">
+          <img alt="techcrunch" src="../img/logo-techcrunch.png" />
+        </div>
+      </div>
+    </header>
+    <aside class="realtor">
+      <h4 class="ty-heading-4 ty-heading-4--primary u-text-upper u-font-16">
+        Top 3 Realtors
+      </h4>
+      <div class="realtor__person">
+        <img
+          src="../img/realtor-1.jpeg"
+          alt="realtor photo 1"
+          class="realtor__person--img"
+        />
+        <p class="realtor__person--name ty-heading-4 ty-heading-4--white">
+          Erik Feinman<br />
+          <span>245 houses sold</span>
+        </p>
+        <img
+          src="../img/realtor-2.jpeg"
+          alt="realtor photo 2"
+          class="realtor__person--img"
+        />
+        <p class="realtor__person--name ty-heading-4 ty-heading-4--white">
+          Kim Brown<br />
+          <span>212 houses sold</span>
+        </p>
+        <img
+          src="../img/realtor-3.jpeg"
+          alt="realtor photo 3"
+          class="realtor__person--img"
+        />
+        <p class="realtor__person--name ty-heading-4 ty-heading-4--white">
+          Toby Ramsey<br />
+          <span>198 houses sold</span>
+        </p>
+      </div>
+    </aside>
+    <div class="feature">
+      <div class="feature__card">
+        <svg class="feature__card--icon">
+          <use xlink:href="../img/sprite.svg#icon-presentation"></use>
+        </svg>
+        <h4 class="ty-heading-4">World's best luxury homes</h4>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+          distinctio necessitatibus pariatur voluptatibus.
+        </p>
+      </div>
+      <div class="feature__card">
+        <svg class="feature__card--icon">
+          <use xlink:href="../img/sprite.svg#icon-presentation"></use>
+        </svg>
+        <h4 class="ty-heading-4">World's best luxury homes</h4>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+          distinctio necessitatibus pariatur voluptatibus.
+        </p>
+      </div>
+      <div class="feature__card">
+        <svg class="feature__card--icon">
+          <use xlink:href="../img/sprite.svg#icon-presentation"></use>
+        </svg>
+        <h4 class="ty-heading-4">World's best luxury homes</h4>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+          distinctio necessitatibus pariatur voluptatibus.
+        </p>
+      </div>
+      <div class="feature__card">
+        <svg class="feature__card--icon">
+          <use xlink:href="../img/sprite.svg#icon-presentation"></use>
+        </svg>
+        <h4 class="ty-heading-4">World's best luxury homes</h4>
+        <p>
+          Tenetur distinctio necessitatibus pariatur voluptatibus quidem
+          consequatur harum.
+        </p>
+      </div>
+      <div class="feature__card">
+        <svg class="feature__card--icon">
+          <use xlink:href="../img/sprite.svg#icon-presentation"></use>
+        </svg>
+        <h4 class="ty-heading-4">World's best luxury homes</h4>
+        <p>
+          Quidem consequatur harum, voluptatum mollitia quae. Tenetur distinctio
+          necessitatibus pariatur voluptatibus.
+        </p>
+      </div>
+      <div class="feature__card">
+        <svg class="feature__card--icon">
+          <use xlink:href="../img/sprite.svg#icon-presentation"></use>
+        </svg>
+        <h4 class="ty-heading-4">World's best luxury homes</h4>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+          distinctio necessitatibus pariatur voluptatibus.
+        </p>
+      </div>
+    </div>
+    <div class="story">
+      <div class="story__left">
+        <img
+          src="../img/story-1.jpeg"
+          alt="story photo 1"
+          class="story__img story__img--1"
+        />
+        <img
+          src="../img/story-2.jpeg"
+          alt="story photo 2"
+          class="story__img story__img--2"
+        />
+      </div>
+      <div class="story__right">
+        <h4 class="ty-heading-4 ty-heading-4--primary u-text-upper">
+          Happy Customers
+        </h4>
+        <h2 class="ty-heading-2">
+          &ldquo;The best decision of our lives&rdquo;
+        </h2>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+          distinctio necessitatibus pariatur voluptatibus. Quidem consequatur
+          harum volupta!
+        </p>
+        <button class="story__right--btn btn">find your own home</button>
+      </div>
+    </div>
+    <div class="home">
+      <div class="home__card">
+        <img
+          src="../img/house-1.jpeg"
+          alt="house photo 1"
+          class="home__card--img"
+        />
+        <div class="home__card--favor">
+          <svg>
+            <use xlink:href="../img/sprite.svg#icon-heart-full"></use>
+          </svg>
+        </div>
+        <div class="home__card--title">Beautiful Familiy House</div>
+        <div class="home__card--country">
+          <svg>
+            <use xlink:href="../img/sprite.svg#icon-global"></use>
+          </svg>
+          <span>USA</span>
+        </div>
+        <div class="home__card--room">
+          <svg>
+            <use xlink:href="../img/sprite.svg#icon-presentation"></use>
+          </svg>
+          <span>5 rooms</span>
+        </div>
+        <div class="home__card--areas">
+          <svg>
+            <use xlink:href="../img/sprite.svg#icon-expand"></use>
+          </svg>
+          <span>325 m2</span>
+        </div>
+        <div class="home__card--price">
+          <svg>
+            <use xlink:href="../img/sprite.svg#icon-lock"></use>
+          </svg>
+          <span>$ 1,200,000</span>
+        </div>
+        <button class="home__card--btn btn">contact realtor</button>
+      </div>
+      <div class="home__card">
+        <img
+          src="../img/house-2.jpeg"
+          alt="house photo 2"
+          class="home__card--img"
+        />
+        <div class="home__card--favor">
+          <svg>
+            <use xlink:href="../img/sprite.svg#icon-heart-full"></use>
+          </svg>
+        </div>
+        <div class="home__card--title">Beautiful Familiy House</div>
+        <div class="home__card--country">
+          <svg>
+            <use xlink:href="../img/sprite.svg#icon-global"></use>
+          </svg>
+          <span>USA</span>
+        </div>
+        <div class="home__card--room">
+          <svg>
+            <use xlink:href="../img/sprite.svg#icon-presentation"></use>
+          </svg>
+          <span>5 rooms</span>
+        </div>
+        <div class="home__card--areas">
+          <svg>
+            <use xlink:href="../img/sprite.svg#icon-expand"></use>
+          </svg>
+          <span>325 m2</span>
+        </div>
+        <div class="home__card--price">
+          <svg>
+            <use xlink:href="../img/sprite.svg#icon-lock"></use>
+          </svg>
+          <span>$ 1,200,000</span>
+        </div>
+        <button class="home__card--btn btn">contact realtor</button>
+      </div>
+      <div class="home__card">
+        <img
+          src="../img/house-3.jpeg"
+          alt="house photo 3"
+          class="home__card--img"
+        />
+        <div class="home__card--favor">
+          <svg>
+            <use xlink:href="../img/sprite.svg#icon-heart-full"></use>
+          </svg>
+        </div>
+        <div class="home__card--title">Beautiful Familiy House</div>
+        <div class="home__card--country">
+          <svg>
+            <use xlink:href="../img/sprite.svg#icon-global"></use>
+          </svg>
+          <span>USA</span>
+        </div>
+        <div class="home__card--room">
+          <svg>
+            <use xlink:href="../img/sprite.svg#icon-presentation"></use>
+          </svg>
+          <span>5 rooms</span>
+        </div>
+        <div class="home__card--areas">
+          <svg>
+            <use xlink:href="../img/sprite.svg#icon-expand"></use>
+          </svg>
+          <span>325 m2</span>
+        </div>
+        <div class="home__card--price">
+          <svg>
+            <use xlink:href="../img/sprite.svg#icon-lock"></use>
+          </svg>
+          <span>$ 1,200,000</span>
+        </div>
+        <button class="home__card--btn btn">contact realtor</button>
+      </div>
+      <div class="home__card">
+        <img
+          src="../img/house-4.jpeg"
+          alt="house photo 4"
+          class="home__card--img"
+        />
+        <div class="home__card--favor">
+          <svg>
+            <use xlink:href="../img/sprite.svg#icon-heart-full"></use>
+          </svg>
+        </div>
+        <div class="home__card--title">Beautiful Familiy House</div>
+        <div class="home__card--country">
+          <svg>
+            <use xlink:href="../img/sprite.svg#icon-global"></use>
+          </svg>
+          <span>USA</span>
+        </div>
+        <div class="home__card--room">
+          <svg>
+            <use xlink:href="../img/sprite.svg#icon-presentation"></use>
+          </svg>
+          <span>5 rooms</span>
+        </div>
+        <div class="home__card--areas">
+          <svg>
+            <use xlink:href="../img/sprite.svg#icon-expand"></use>
+          </svg>
+          <span>325 m2</span>
+        </div>
+        <div class="home__card--price">
+          <svg>
+            <use xlink:href="../img/sprite.svg#icon-lock"></use>
+          </svg>
+          <span>$ 1,200,000</span>
+        </div>
+        <button class="home__card--btn btn">contact realtor</button>
+      </div>
+      <div class="home__card">
+        <img
+          src="../img/house-5.jpeg"
+          alt="house photo 5"
+          class="home__card--img"
+        />
+        <div class="home__card--favor">
+          <svg>
+            <use xlink:href="../img/sprite.svg#icon-heart-full"></use>
+          </svg>
+        </div>
+        <div class="home__card--title">Beautiful Familiy House</div>
+        <div class="home__card--country">
+          <svg>
+            <use xlink:href="../img/sprite.svg#icon-global"></use>
+          </svg>
+          <span>USA</span>
+        </div>
+        <div class="home__card--room">
+          <svg>
+            <use xlink:href="../img/sprite.svg#icon-presentation"></use>
+          </svg>
+          <span>5 rooms</span>
+        </div>
+        <div class="home__card--areas">
+          <svg>
+            <use xlink:href="../img/sprite.svg#icon-expand"></use>
+          </svg>
+          <span>325 m2</span>
+        </div>
+        <div class="home__card--price">
+          <svg>
+            <use xlink:href="../img/sprite.svg#icon-lock"></use>
+          </svg>
+          <span>$ 1,200,000</span>
+        </div>
+        <button class="home__card--btn btn">contact realtor</button>
+      </div>
+      <div class="home__card">
+        <img
+          src="../img/house-6.jpeg"
+          alt="house photo 6"
+          class="home__card--img"
+        />
+        <div class="home__card--favor">
+          <svg>
+            <use xlink:href="../img/sprite.svg#icon-heart-full"></use>
+          </svg>
+        </div>
+        <div class="home__card--title">Beautiful Familiy House</div>
+        <div class="home__card--country">
+          <svg>
+            <use xlink:href="../img/sprite.svg#icon-global"></use>
+          </svg>
+          <span>USA</span>
+        </div>
+        <div class="home__card--room">
+          <svg>
+            <use xlink:href="../img/sprite.svg#icon-presentation"></use>
+          </svg>
+          <span>5 rooms</span>
+        </div>
+        <div class="home__card--areas">
+          <svg>
+            <use xlink:href="../img/sprite.svg#icon-expand"></use>
+          </svg>
+          <span>325 m2</span>
+        </div>
+        <div class="home__card--price">
+          <svg>
+            <use xlink:href="../img/sprite.svg#icon-lock"></use>
+          </svg>
+          <span>$ 1,200,000</span>
+        </div>
+        <button class="home__card--btn btn">contact realtor</button>
+      </div>
+    </div>
+    <div class="gallery">
+      <div class="gallery__img gallery__img--1">
+        <img src="../img/gal-1.jpeg" alt="gallery photo 1" />
+      </div>
+      <div class="gallery__img gallery__img--2">
+        <img src="../img/gal-2.jpeg" alt="gallery photo 2" />
+      </div>
+      <div class="gallery__img gallery__img--3">
+        <img src="../img/gal-3.jpeg" alt="gallery photo 3" />
+      </div>
+      <div class="gallery__img gallery__img--4">
+        <img src="../img/gal-4.jpeg" alt="gallery photo 4" />
+      </div>
+      <div class="gallery__img gallery__img--5">
+        <img src="../img/gal-5.jpeg" alt="gallery photo 5" />
+      </div>
+      <div class="gallery__img gallery__img--6">
+        <img src="../img/gal-6.jpeg" alt="gallery photo 6" />
+      </div>
+      <div class="gallery__img gallery__img--7">
+        <img src="../img/gal-7.jpeg" alt="gallery photo 7" />
+      </div>
+      <div class="gallery__img gallery__img--8">
+        <img src="../img/gal-8.jpeg" alt="gallery photo 8" />
+      </div>
+      <div class="gallery__img gallery__img--9">
+        <img src="../img/gal-9.jpeg" alt="gallery photo 9" />
+      </div>
+      <div class="gallery__img gallery__img--10">
+        <img src="../img/gal-10.jpeg" alt="gallery photo 10" />
+      </div>
+      <div class="gallery__img gallery__img--11">
+        <img src="../img/gal-11.jpeg" alt="gallery photo 11" />
+      </div>
+      <div class="gallery__img gallery__img--12">
+        <img src="../img/gal-12.jpeg" alt="gallery photo 12" />
+      </div>
+      <div class="gallery__img gallery__img--13">
+        <img src="../img/gal-13.jpeg" alt="gallery photo 13" />
+      </div>
+      <div class="gallery__img gallery__img--14">
+        <img src="../img/gal-14.jpeg" alt="gallery photo 14" />
+      </div>
+    </div>
+    <footer class="footer">footer</footer>
+  </body>
 </html>

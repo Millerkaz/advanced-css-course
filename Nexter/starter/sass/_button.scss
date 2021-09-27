@@ -1,0 +1,14 @@
+.btn {
+  padding: 1.5rem 3rem;
+  background-color: $color-3rd;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    filter: brightness(0.9);
+  }
+}
